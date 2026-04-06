@@ -7,7 +7,9 @@ export const useTripContext = () => useContext(TripContext);
 export const TripProvider = ({ children }) => {
   const [tripName, setTripName] = useState(() => {
     const saved = localStorage.getItem('trip_name');
-    return saved ? JSON.parse(saved) : '';
+    const parsed = saved ? JSON.parse(saved) : '';
+    // Purge old dummy name if it exists in storage
+    return (parsed === 'Bali Getaway') ? '' : parsed;
   });
 
   const [members, setMembers] = useState(() => {

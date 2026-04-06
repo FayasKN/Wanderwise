@@ -58,11 +58,11 @@ export default function Dock() {
     <>
       <ExpenseReceipt ref={receiptRef} />
       <div style={{
-      position: 'fixed', bottom: '30px', left: '50%', transform: 'translateX(-50%)',
-      zIndex: 1000, display: 'flex', gap: '10px', padding: '5px 20px',
-      background: 'rgba(10, 15, 30, 0.8)', backdropFilter: 'blur(20px)',
+      position: 'fixed', bottom: '25px', left: '50%', transform: 'translateX(-50%)',
+      zIndex: 1000, display: 'flex', gap: '8px', padding: '3px 15px',
+      background: 'rgba(10, 15, 30, 0.85)', backdropFilter: 'blur(24px)',
       border: '1px solid var(--glass-border)', borderRadius: '40px',
-      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      boxShadow: '0 8px 32px rgba(0,0,0,0.6)'
     }}>
       {dockItems.map(item => (
         <button
